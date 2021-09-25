@@ -136,7 +136,7 @@ void guardarCursos(char *** &cursos, char buffCursos[][MAX][7], int cantCursAlum
     for (int i = 0; i < numAlum; i++) { //crear memoria para cd alumno
         cursos[i] = new char* [cantCursAlum[i] + 1]; // cantCursos + 1 porq voy a apuntar a null como flag de terminacion para cd cursos
 
-        for (int j = 0; i < cantCursAlum[i]; j++) { //Recorrer para cada curso
+        for (int j = 0; j < cantCursAlum[i] ; j++) { //Recorrer para cada curso
             //int tam = strlen( buffCursos[i][j]);   //no es necesario si sabemos que es 7 
             cursos[i][j] = new char[7];
             strcpy(cursos[i][j], buffCursos[i][j]);
